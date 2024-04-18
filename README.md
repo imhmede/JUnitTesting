@@ -18,7 +18,7 @@ The project is structured as follows:
 - **JUnit 5**: Download the JUnit 5 JAR file from the [JUnit website](https://junit.org/junit5/) and place it in the `lib` folder.
 - **Apache Ant**: The program is automated using an Ant script, so you need to have Apache Ant installed.
       - To install Apache Ant, follow the instructions in the [official Apache Ant installation guide](https://ant.apache.org/manual/install.html).
-    - For a tutorial on getting started with Apache Ant, check out the [Hello World with Apache Ant guide](https://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html).
+      - For a tutorial on getting started with Apache Ant, check out the [Hello World with Apache Ant guide](https://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html).
 
 
 ## Usage
