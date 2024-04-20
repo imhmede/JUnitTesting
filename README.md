@@ -22,12 +22,12 @@ The project is structured as follows:
 
 
 ## Usage
-### Compiling
 
 To compile all the Java files, run the following command:
 
 ```bash
 ant compile
+'''
 
 To run the Java program, use the following command:
 ```bash
@@ -36,6 +36,7 @@ ant run
 To perform unit testing, run the following command:
 ```bash
 ant test
+'''
 
 To clean up the project directory by deleting the classes directory, use the following command:
 ```bash
