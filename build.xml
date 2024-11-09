@@ -47,7 +47,7 @@
             </classpath>
             <arg value="test.TestCases"/>
         </java> -->
-        <record name="${reports.dir}/test-output.txt" append="no" action="start"/>
+        <!-- <record name="${reports.dir}/test-output.txt" append="no" action="start"/> -->
         <junit printsummary="yes" haltonfailure="false" fork="yes">
             <formatter type="xml"/>
             <classpath>
@@ -71,12 +71,12 @@
                 </fileset>
             </batchtest>
         </junit>
-        <junitreport todir="${reports.dir}">
+        <!-- <junitreport todir="${reports.dir}">
             <fileset dir="${reports.dir}">
                 <include name="TEST-*.xml"/>
             </fileset>
         </junitreport>
-        <record name="${reports.dir}/test-output.txt" action="stop"/>
+        <record name="${reports.dir}/test-output.txt" action="stop"/> -->
     </target>
 
     <target name="rebuild" depends="clean, init, compile, test" />
