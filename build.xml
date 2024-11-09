@@ -4,6 +4,7 @@
     <property name="src.dir" location="src"/>
     <property name="test.dir" location="test"/>
     <property name="build.dir" location="build"/>
+    <property name="reports.dir" location="${build.dir}/test-reports"/>
     <property name="main.class" value="src.main.app.Runner" />
     <property name="lib.dir" location="lib"/>
     <property name="junit.jar" location="${lib.dir}/junit-4.13.2.jar"/>
@@ -25,6 +26,7 @@
     <target name="init" depends="clean">
         <!-- Create the classes directory if it doesn't exist -->
         <mkdir dir="${build.dir}" />
+        <mkdir dir="${reports.dir}" />
     </target>
 
     <!-- Compile Java classes -->

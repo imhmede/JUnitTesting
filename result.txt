@@ -1,0 +1,15 @@
+Testsuite: TestCases
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.063 sec
+
+Testcase: testQuickSortWithUnsortedArray took 0.003 sec
+Testcase: testQuickSortWithEmptyArray took 0.001 sec
+Testcase: testBinarySearchWithTargetPresent took 0.002 sec
+	FAILED
+expected:<20> but was:<2>
+junit.framework.AssertionFailedError: expected:<20> but was:<2>
+	at TestCases.testBinarySearchWithTargetPresent(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+
+Testcase: testBinarySearchWithEmptyArray took 0 sec
+Testcase: testQuickSortWithSortedArray took 0 sec
+Testcase: testBinarySearchWithTargetNotPresent took 0 sec

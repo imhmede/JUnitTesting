@@ -1,4 +1,3 @@
-package test;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -12,7 +11,7 @@ public class TestCases {
         BinarySearch binarySearch = new BinarySearch();
         int[] array = {1, 2, 3, 4, 5};
         int target = 3;
-        Assert.assertEquals(2, binarySearch.binarySearch(array, target));
+        Assert.assertEquals(20, binarySearch.binarySearch(array, target));
     }
 
     @Test
