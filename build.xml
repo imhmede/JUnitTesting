@@ -25,8 +25,7 @@
     
     
     <target name="checkstyle"
-            description="Generates a report of code convention violations."
-             depends="init">
+            description="Generates a report of code convention violations.">
 
         <!-- See https://checkstyle.org/anttask.html
              for full options of using checkstyle with ant-->
