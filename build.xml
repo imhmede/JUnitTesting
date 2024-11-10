@@ -67,7 +67,7 @@
             classpathref="classpath" />
         <spotbugs home="${lib.dir}/spotbugs-4.8.6"
                     output="xml"
-                    outputFile="${reports.dir}/spotbugs-report.xml" >
+                    outputFile="${reports.dir}/spotbugsXml.xml" >
             <auxClasspath path="${lib.dir}/Regex.jar" />
             <sourcePath path="${src.dir}" />
             <class location="${build.dir}" />
