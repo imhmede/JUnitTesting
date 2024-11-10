@@ -63,9 +63,8 @@
     </target>  
 
     <target name="spotbugs">
-        <taskdef name="spotbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
-            classpath="${lib.dir}/spotbugs-4.8.6/lib/spotbugs-ant.jar"
-            classpathref="classpath"/>
+        <taskdef resource="edu/umd/cs/findbugs/anttask/tasks.properties" 
+            classpath="${lib.dir}/spotbugs-4.8.6/lib/spotbugs-ant.jar"/>
         <spotbugs home="${lib.dir}/spotbugs-4.8.6"
                     output="xml"
                     outputFile="${reports.dir}/spotbugsXml.xml" >
