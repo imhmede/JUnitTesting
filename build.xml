@@ -63,32 +63,12 @@
     </target>  
 
     <target name="spotbugs">
-        <taskdef resource="edu/umd/cs/findbugs/anttask/tasks.properties"
-            classpathref="classpath" />
+        <taskdef name="spotbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
+            classpath="${lib.dir}/spotbugs-4.8.6/lib/spotbugs-ant.jar"
+            classpathref="classpath"/>
         <spotbugs home="${lib.dir}/spotbugs-4.8.6"
                     output="xml"
                     outputFile="${reports.dir}/spotbugsXml.xml" >
-            <auxClasspath path="${lib.dir}/Regex.jar" />
-            <sourcePath path="${src.dir}" />
-            <class location="${build.dir}" />
-        </spotbugs>
-    </target>
-
-    <target name="findbugs" depends="compile">
-        <!-- Define the SpotBugs task -->
-        <taskdef name="spotbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
-                classpathref="classpath">
-            <classpath>
-                <fileset dir="${lib.dir}/findbugs-3.0.1/lib">
-                    <include name="*.jar"/>
-                </fileset>
-            </classpath>
-        </taskdef>
-        
-        <!-- Run SpotBugs -->
-        <spotbugs home="${lib.dir}/findbugs-3.0.1"
-                output="xml"
-                outputFile="${reports.dir}/spotbugs-report.xml">
             <auxClasspath path="${lib.dir}/Regex.jar" />
             <sourcePath path="${src.dir}" />
             <class location="${build.dir}" />
