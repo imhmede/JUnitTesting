@@ -3,7 +3,7 @@
     <!-- Properties -->
     <property name="src.dir" location="src"/>
     <property name="test.dir" location="test"/>
-    <property name="config.dir" location="config"/>
+    <property name="conf.dir" location="conf"/>
     <property name="build.dir" location="build"/>
     <property name="reports.dir" location="${build.dir}/test-reports"/>
     <property name="main.class" value="src.main.app.Runner" />
@@ -29,13 +29,33 @@
 
         <!-- See https://checkstyle.org/anttask.html
              for full options of using checkstyle with ant-->
-        <checkstyle config="${config.dir}/sun_checks.xml" 
+        <checkstyle config="${conf.dir}/sun_checks.xml" 
                     failureProperty="checkstyle.failure" 
                     failOnViolation="false">
             <formatter type="xml" tofile="${reports.dir}/checkstyle_report.xml"/>
             <fileset dir="${src.dir}" includes="**/*.java"/>
             <fileset dir="${test.dir}" includes="**/*.java"/>
         </checkstyle>
+    </target>
+
+    <target name="pmd">
+        <taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask">
+            <classpath>
+                <fileset dir="${lib.dir}/pmd-bin-7.7.0/lib">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+        </taskdef>
+        <pmd>
+            <ruleset>conf/rulesets.xml</ruleset>
+            <formatter type="xml" tofile="${reports.dir}/pmd-report.xml"/>
+            <formatter type="xml" toFile="${reports.dir}/report_pmd.xml">
+                <param name="encoding" value="UTF-8" /> <!-- enforce UTF-8 encoding for the XML -->
+            </formatter>
+            <fileset dir="${src.dir}">
+                <include name="java/lang/*.java"/>
+            </fileset>
+        </pmd>
     </target>
 
     <target name="clean">
