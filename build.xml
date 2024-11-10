@@ -62,7 +62,7 @@
         </pmd>
     </target>  
 
-    <target name="spotbugs" depends="compile">
+    <target name="spotbugs">
         <taskdef resource="edu/umd/cs/findbugs/anttask/tasks.properties"
             classpathref="classpath" />
         <spotbugs home="${lib.dir}/spotbugs-4.8.6"
