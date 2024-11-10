@@ -48,8 +48,7 @@
         </taskdef>
         <pmd>
             <ruleset>conf/rulesets.xml</ruleset>
-            <formatter type="xml" tofile="${reports.dir}/pmd-report.xml"/>
-            <formatter type="xml" toFile="${reports.dir}/report_pmd.xml">
+            <formatter type="xml" toFile="${reports.dir}/pmd.xml">
                 <param name="encoding" value="UTF-8" /> <!-- enforce UTF-8 encoding for the XML -->
             </formatter>
             <fileset dir="${src.dir}">
