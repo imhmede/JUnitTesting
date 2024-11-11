@@ -95,15 +95,6 @@
 
     <!-- Run JUnit tests -->
     <target name="test" depends="compile">
-        <!-- <java classname="org.junit.runner.JUnitCore" fork="true">
-            <classpath>
-                <path refid="classpath"/>
-                <pathelement location="${junit.jar}"/>
-                <pathelement location="${hamcrest.jar}"/>
-            </classpath>
-            <arg value="test.TestCases"/>
-        </java> -->
-        <!-- <record name="${reports.dir}/test-output.txt" append="no" action="start"/> -->
         <junit printsummary="yes" haltonfailure="false" fork="yes">
             <formatter type="xml"/>
             <classpath>
