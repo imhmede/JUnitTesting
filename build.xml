@@ -1,5 +1,5 @@
 <project name="JUnitTest" basedir="." default="rebuild">
-
+    
     <!-- Properties -->
     <property name="src.dir" location="src"/>
     <property name="test.dir" location="test"/>
