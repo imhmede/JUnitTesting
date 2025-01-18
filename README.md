@@ -42,4 +42,3 @@ To clean up the project directory by deleting the classes directory, use the fol
 ```bash
 ant clean
 
-
