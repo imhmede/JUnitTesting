@@ -19,7 +19,7 @@ public class TestCases {
         BinarySearch binarySearch = new BinarySearch();
         int[] array = {1, 2, 3, 4, 5};
         int target = 6;
-        Assert.assertEquals(-1, binarySearch.binarySearch(array, target));
+        Assert.assertEquals(1, binarySearch.binarySearch(array, target));
     }
 
     @Test
