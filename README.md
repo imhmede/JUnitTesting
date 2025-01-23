@@ -1,4 +1,4 @@
-# JUnit Testing for QuickSort and BinarySearch
+# JUnit Testing for QuickSort and BinarySearch       
 This is a sample Java program designed for a lab assignment involving the implementation of JUnit tests for the QuickSort and BinarySearch algorithms.
 
 ## Project Structure
