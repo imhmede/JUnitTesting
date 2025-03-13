@@ -1,0 +1,69 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>Lab 1: Caleb Palmares</title>
+</head>
+<body>
+<h1>Lab 1: Caleb Palmares</h1>
+<div style="width: 600px; margin: 20px auto; border: 1px solid #888; padding: 20px;">
+  <pre><code>
+
+//Name:             Caleb Palmares
+//Date:             September 4th, 2022
+//Assignment title: Lab 1
+
+
+import java.text.DecimalFormat;
+
+public class Test
+
+{
+
+	public static void main(String[] args) {
+		
+		//Round to 2 decimal places
+		DecimalFormat dfTwo = new DecimalFormat("0.00");
+		
+		//Initial balance input
+		Double dBalance = 1000.00;
+		
+		//Yearly interest, which is 5/100
+	        Double dInterest = 0.05;
+	    
+	        //Initial year
+		Integer year_count = 0;	
+		
+		//Total amount of years
+		Integer total_year_count = 3;	
+		
+        while (year_count &lt; total_year_count) {
+        	
+        	//Increment year until total year count is met
+        	year_count++;
+        	        	
+        	//Add interest at end of year
+        	dBalance = dBalance + (dBalance * dInterest);
+        	
+        	//Print the balance at end of year
+        	System.out.println("The account balance will be $" + (dfTwo.format(dBalance)) + " after year " + year_count + ".");
+        	   
+        }
+    }
+
+}
+
+//Console output
+/*
+The account balance will be $1050.00 after year 1.
+The account balance will be $1102.50 after year 2.
+The account balance will be $1157.62 after year 3.
+*/
+</code></pre>
+</div>
+</body>
+</html>
