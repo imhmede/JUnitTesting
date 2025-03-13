@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "JUnitTesting",
+			"path": "."
+		},
+		{
+			"name": "benchmark",
+			"path": "../../../Downloads/JUnitTesting-main/benchmark"
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}
